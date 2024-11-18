@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+
+
+
+
+<head>
+	<title>DTherapist</title>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/svg+xml" href="./images/logo1.png" />
+	<link rel="icon" type="image/svg+xml" href="./images/logo1.png" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	
+
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+		<div class="bg-danger text-center">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" class="highlight">upgrade your browser</a> to improve your experience.</div>
+	<![endif]-->
+
+	<div class="preloader">
+		<div class="preloader_image"></div>
+	</div>
+
+	<!-- search modal -->
+	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">
+				<i class="rt-icon2-cross2"></i>
+			</span>
+		</button>
+		<div class="widget widget_search">
+			<form method="get" class="searchform search-form form-inline" action="https://html.modernwebtemplates.com/DTherapist/">
+				<div class="form-group">
+					<input type="text" value="" name="search" class="form-control" placeholder="Search keyword" id="modal-search-input">
+				</div>
+				<button type="submit" class="theme_button">Search</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- Unyson messages modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
+		<div class="fw-messages-wrap ls with_padding">
+			<!-- Uncomment this UL with LI to show messages in modal popup to your user: -->
+			<!--
+		<ul class="list-unstyled">
+			<li>Message To User</li>
+		</ul>
+		-->
+
+		</div>
+	</div>
+	<!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
+	<div id="canvas">
+		<div id="box_wrapper">
+
+			<!-- template sections -->
+
+			<section class="page_topline cs table_section table_section_md columns_padding_0">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3 text-center text-md-left">
+							<ul class="inline-dropdown inline-block divided_content">
+
+								<li class="dropdown login-dropdown">
+									<a class="header-button" data-target="#" href="index.html" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+										<i class="fa fa-user"></i>
+										<span class="header-button-text">Login</span>
+									</a>
+
+									<div class="dropdown-menu ls with_padding">
+
+										<p>
+											<strong class="grey">If you have an account, please log in:</strong>
+										</p>
+										<form role="form" action="https://html.modernwebtemplates.com/">
+
+											<div class="form-group">
+												<label for="login_email" class="sr-only">Email address</label>
+												<input type="email" class="form-control" id="login_email" placeholder="Email Address">
+											</div>
+											<div class="form-group">
+												<label for="login_password" class="sr-only">Password</label>
+												<input type="password" class="form-control" id="login_password" placeholder="Password">
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" id="remember_checkbox">
+												<label for="remember_checkbox">
+													Remember Me
+												</label>
+											</div>
+
+											<button type="button" class="theme_button color1 block_button">
+												Log in
+											</button>
+
+										</form>
+										<div class="topmargin_20 darklinks">
+											<a href="#">Forgot Your Password?</a>
+										</div>
+
+									</div>
+								</li>
+
+
+								<a class="header-button" href="#">
+									<i class="fa fa-lock"></i>
+									<span class="header-button-text">Register</span>
+								</a>
+							</ul>
+
+						</div>
+
+						<div class="col-md-6 text-center divided_content">
+
+							<div>
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-user highlight fontsize_16"></i>
+									</div>
+									<div class="media-body">
+										+234 803 308 7303
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="media small-teaser">
+									<div class="media-left">
+										<i class="fa fa-envelope highlight fontsize_16"></i>
+									</div>
+									<div class="media-body">
+										<a href="">support@DTherapist.com</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-3 text-center text-md-right bottommargin_0">
+							<a href="#appointment" class="theme_button color1 margin_0">Make an appointment</a>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<header class="page_header header_white table_section columns_padding_0 toggler-xs-right">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-3 col-sm-5">
+							<a href="index.html" class="logo">
+								<img src="./images/logo1.png" alt="">
+							</a>
+							<!-- header toggler -->
+							<span class="toggle_menu visible-xs">
+								<span></span>
+							</span>
+						</div>
+						<div class="col-md-6 col-sm-2 text-center">
+							<!-- main nav start -->
+							<nav class="mainmenu_wrapper">
+								<ul class="mainmenu nav sf-menu">
+									<li class="active">
+										<a href="index.html">Home</a>
+										
+									</li>
+
+									<!-- blog -->
+									<li>
+										<a href="blog-right.html">Counseling</a>
+										
+									</li>
+									<!-- eof blog -->
+
+									<li>
+										<a href="#">DAnonymous</a>
+										
+										
+									</li>
+									 <!-- library -->
+									 <li>
+										<a href="./library.html">Library</a>
+
+									</li>
+									<!-- eof library -->
+									
+
+									 <!-- about -->
+									<li>
+										<a href="about.html">About</a>
+										
+									</li>
+									<!-- eof about -->
+								</ul>
+							</nav>
+							<!-- eof main nav -->
+							<span class="toggle_menu hidden-xs">
+								<span></span>
+							</span>
+						</div>
+						<div class="col-md-3 col-sm-5 text-right hidden-xs lightgreylinks">
+							<div class="page_social_icons divided_content">
+								<span>
+									<a class="social-icon soc-facebook" href="#" title="Facebook"></a>
+								</span>
+								<span>
+									<a class="social-icon soc-twitter" href="#" title="Twitter"></a>
+								</span>
+								<span>
+									<a class="social-icon soc-google" href="#" title="Google"></a>
+								</span>
+								<span>
+									<a class="social-icon soc-linkedin" href="#" title="LinkedIn"></a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<section class="page_breadcrumbs ds background_cover section_padding_50">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<h2>About</h2>
+							<ol class="breadcrumb divided_content wide_divider">
+								<li>
+									<a href="index.html">
+										Home
+									</a>
+								</li>
+								
+								<li class="active">About</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About Us Section -->
+<section class="ls section_padding_top_100 section_padding_bottom_100 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-push-6">
+                <img src="./images/img1.2.jpg" alt="About DTherapist" class="img-fluid rounded shadow" />
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+                <h2 class="section_header text-primary">About DTherapist</h2>
+                <hr class="divider_30_1">
+                <p>
+                    "On that fateful day, my world came crashing down as I watched my 19-year-old son collapse in my presence while playing football. The shock, pain, and overwhelming grief that followed were indescribable. Losing him was like losing a part of myself, leaving an unfillable void in my life. As I navigated this isolating journey of bereavement, I realized I wasn’t alone—and so DTherapist was born."
+                </p>
+				<p>
+					On the first year remembrance, we received this message from Dr. Enesi Y. Salawu, his course adviser, department of mechanical engineering, Covenant University Ota;<em>‘Dubbie was one of my best students. As his adviser, he was such a courageous, knowledgeable and passionate soul. Above all, always attentive and ready to achieve more in life. Sincerely speaking, his death made me calm to reflect more about life and loved my students more. He was supposed to be graduating now with this set. But his journey in life wasn't cut short but elevated to a place where he will enjoy peace round above. To the parents, friends and loved ones, we may be remembering him today crying, but remember that my own boy is rejoicing where he is because I surely know that he is in a very good place. God bless you all’.</em> 
+				</p>
+                <p>
+                    DTherapist is dedicated to supporting individuals through mental health challenges, grief, and loss. Our platform provides compassionate, accessible, and professional mental health services for individuals of all ages, delivered in a safe, inclusive environment. We offer therapy, support groups, and a wealth of educational resources to guide you toward healing and growth.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Vision & Mission Section -->
+<section class="section_padding_top_75 section_padding_bottom_75 bg-primary text-white">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-6">
+                <h3>Our Vision</h3>
+                <p>"To become a beacon of hope, guiding individuals through mental health concerns, loss, and grief, fostering resilience and healing in our community."</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Our Mission</h3>
+                <p>"To provide compassionate support, resources, and guidance to those navigating mental health issues and grief, aiming to cultivate an environment where individuals find solace, renew their spirits, and find peace within themselves."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Objectives Section -->
+<section class="ls section_padding_top_75 section_padding_bottom_75">
+    <div class="container">
+        <h3 class="section_header text-center">Our Objectives</h3>
+        <hr class="divider_30">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-check text-primary"></i> Provide a compassionate, safe, and supportive community for individuals to share their experiences and emotions.</li>
+                    <li><i class="fa fa-check text-primary"></i> Offer resources and guidance for navigating mental health and grieving processes.</li>
+                    <li><i class="fa fa-check text-primary"></i> Facilitate connections with others who have experienced similar losses.</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-check text-primary"></i> Provide access to expert advice, support groups, and therapy sessions.</li>
+                    <li><i class="fa fa-check text-primary"></i> Create a library of articles, videos, and podcasts on mental health, grief, healing, and wellness.</li>
+                    <li><i class="fa fa-check text-primary"></i> Offer personalized support plans and goal-setting to facilitate healing.</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-check text-primary"></i> Partner with mental health professionals and organizations for additional support.</li>
+                    <li><i class="fa fa-check text-primary"></i> Establish a community forum for sharing stories, memories, and tributes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Values Section -->
+<section class="section_padding_top_75 section_padding_bottom_75 bg-secondary text-white">
+    <div class="container">
+        <h3 class="section_header text-center">Our Core Values</h3>
+        <hr class="divider_30">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Compassion</h4>
+                <p>Providing empathetic and caring support to all individuals seeking help.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Confidentiality</h4>
+                <p>Ensuring a safe, secure space for open communication without fear of judgment.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Inclusivity</h4>
+                <p>Respecting and honoring diverse backgrounds, including cultural and religious differences.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Authenticity</h4>
+                <p>Fostering genuine connections and honest communication with all clients.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Collaboration</h4>
+                <p>Working closely with clients and professionals to provide the best support possible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview Section -->
+<section id="services" class="ls section_padding_top_75 section_padding_bottom_100 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <h2 class="section_header text-primary">What We Offer</h2>
+            <p>
+                DTherapist aims to create a compassionate, safe environment where you can thrive. Whether you seek professional counseling or a place to express yourself anonymously, we are here to support you.
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="with_padding text-center teaser hover_shadow bg-white p-4 rounded shadow">
+                    <img src="images/service-icons/relationship.png" alt="Group Therapy" class="mb-3">
+                    <h4>Group Therapy</h4>
+                    <p>Supportive, group-based therapy for shared issues like anxiety, depression, and other mental health disorders.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="with_padding text-center teaser hover_shadow bg-white p-4 rounded shadow">
+                    <img src="images/service-icons/mental.png" alt="Mental Health" class="mb-3">
+                    <h4>Mental Health Counseling</h4>
+                    <p>Focuses on improving focus, relieving stress, and managing anxiety to support overall mental well-being.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="with_padding text-center teaser hover_shadow bg-white p-4 rounded shadow">
+                    <img src="images/service-icons/feelings.png" alt="Family Therapy" class="mb-3">
+                    <h4>Family Therapy</h4>
+                    <p>Helps families improve communication and resolve conflicts, often used to support children and adolescents.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="with_padding text-center teaser hover_shadow bg-white p-4 rounded shadow">
+                    <img src="images/service-icons/conflicting.png" alt="Interpersonal Therapy" class="mb-3">
+                    <h4>Interpersonal Therapy (IPT)</h4>
+                    <p>Focused on resolving interpersonal issues, often used to treat depression and anxiety.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+			<footer class="page_footer cs main_color2 table_section section_padding_50 columns_padding_0">
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-4 col-sm-push-4 text-center">
+							<a href="index.html" class="logo big text-shadow">
+								<img src="./images/logo.png" class="img-fluid" alt="Logo" style="max-width: 100px;">
+							</a>
+						</div>
+
+						<div class="col-sm-4 col-sm-pull-4 text-center text-sm-left text-md-left">
+							<div class="widget widget_nav_menu greylinks">
+
+								<ul class="menu divided_content wide_divider">
+									<li class="">
+										<a href="index.html">Home</a>
+									</li>
+									<li class="">
+										<a href="about.html">About</a>
+									</li>
+									
+								</ul>
+
+							</div>
+						</div>
+
+						<div class="col-sm-4 text-center text-sm-right text-md-right">
+							<div class="widget widget_nav_menu greylinks">
+
+								<ul class="menu divided_content wide_divider">
+									<li class="">
+										<a href="./terms.html">Terms & privacy</a>
+									</li>
+									
+									<li class="">
+										<a href="contact.html">Contacts</a>
+									</li>
+								</ul>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+
+			<section class="cs main_color2 page_copyright section_padding_15">
+				<div class="container with_top_border">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<p class="small-text">&copy; DTherapist and DAnonymous. All Rights Reserved</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- eof #box_wrapper -->
+	</div>
+	<!-- eof #canvas -->
+
+	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/compressed.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/switcher.js"></script>
+
+</body>
+
+
+<!-- Mirrored from html.modernwebtemplates.com/DTherapist/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2024 17:29:36 GMT -->
+</html>
