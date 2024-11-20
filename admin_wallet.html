@@ -55,7 +55,7 @@
 			<header class="page_header_side page_header_side_sticked active-slide-side-header ds">
 				<div class="side_header_logo ds ms">
 					<a href="admin_index.html">
-						<img src="./images/logo.png" class="img-fluid" alt="Logo" style="max-width: 100px; align-items: center;">
+						<img src="./images/logo1.png" class="img-fluid" alt="Logo" style="max-width: 90%; align-items: center;">
 						
 					</a>
 				</div>
@@ -462,7 +462,7 @@
 						<div class="col-md-6">
 							<ol class="breadcrumb darklinks">
 								
-								<li class="active">Dashboard</li>
+								<li class="active">Wallet</li>
 							</ol>
 						</div>
 						<!-- .col-* -->
@@ -483,82 +483,85 @@
 			</section>
 
             <section class="ls section_padding_top_50 section_padding_bottom_50 columns_padding_10">
-                <div class="container-fluid mt-5">
-                    <div class="row justify-content-center">
-                        <div class="col-md-10 col-lg-8">
-                            <div class="p-5 rounded shadow-sm" style="background-color: #ffffff;">
-
-                                <!-- Wallet Overview -->
-                                <div class="row mb-4">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="teaser warning_bg_color counter-background-teaser text-center dashboard-card">
-                                            <span class="counter counter-background counted" data-from="0" data-to="0" data-speed="2100">0</span>
-                                            <h3 class="counter highlight counted" data-from="0" data-to="0" data-speed="2100">0</h3>
-                                            <h4>Funds</h4>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <div class="teaser warning_bg_color counter-background-teaser text-center dashboard-card">
-                                            <span class="counter counter-background counted" data-from="0" data-to="0" data-speed="2100">0</span>
-                                            <h3 class="counter highlight counted" data-from="0" data-to="0" data-speed="2100">0</h3>
-                                            <h4>Token</h4>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                                <!-- Fund Wallet and Buy Tokens -->
-                                <form>
-                                    <div class="form-group mb-3">
-                                        <label for="fundWallet" class="form-label" style="font-weight: 600; color: #333;">Fund Wallet</label>
-                                        <input type="number" id="fundWallet" class="form-control rounded-lg" placeholder="Enter amount to fund" style="padding: 0.75rem; border: 1px solid #dcdcdc;">
-                                    </div>
-                                    <button type="button" class="btn w-100 rounded-lg mb-4" style="padding: 0.75rem; background-color: #4a90e2; color: #ffffff; font-weight: 600; border: none; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-                                        Fund Wallet
-                                    </button>
-            
-                                    <div class="form-group mb-3">
-                                        <label for="buyTokens" class="form-label" style="font-weight: 600; color: #333;">Buy Tokens</label>
-                                        <input type="number" id="buyTokens" class="form-control rounded-lg" placeholder="Enter tokens to buy" style="padding: 0.75rem; border: 1px solid #dcdcdc;">
-                                    </div>
-                                    <button type="button" class="btn w-100 rounded-lg mb-4" style="padding: 0.75rem; background-color: #4a90e2; color: #ffffff; font-weight: 600; border: none; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-                                        Buy Tokens
-                                    </button>
-                                </form>
-            
-                                <!-- Transaction History -->
-                                <h5 class="mb-3" style="color: #4a90e2;">Transaction History</h5>
-                                <table class="table table-bordered">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Date</th>
-                                            <th>Description</th>
-                                            <th>Amount</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2024-11-10</td>
-                                            <td>Fund Wallet</td>
-                                            <td>$50</td>
-                                            <td>Completed</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>2024-11-09</td>
-                                            <td>Buy Tokens</td>
-                                            <td>5 Tokens</td>
-                                            <td>Completed</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+				<div class="container-fluid mt-5">
+					<div class="row justify-content-center">
+						<div class="col-12 col-md-10 col-lg-8">
+							<div class="p-4 rounded shadow-sm" style="background-color: #ffffff;">
+		
+								<!-- Wallet Overview -->
+								<div class="row mb-4 gx-3 gy-3">
+									<div class="col-12 col-md-6">
+										<div class="teaser warning_bg_color counter-background-teaser text-center dashboard-card">
+											<span class="counter counter-background counted" data-from="0" data-to="0" data-speed="2100">0</span>
+											<h3 class="counter highlight counted" data-from="0" data-to="0" data-speed="2100">0</h3>
+											<h4>Wallet Balance</h4>
+										</div>
+									</div>
+									<div class="col-12 col-md-6">
+										<div class="teaser warning_bg_color counter-background-teaser text-center dashboard-card">
+											<span class="counter counter-background counted" data-from="0" data-to="0" data-speed="2100">0</span>
+											<h3 class="counter highlight counted" data-from="0" data-to="0" data-speed="2100">0</h3>
+											<h4>Available token</h4>
+										</div>
+									</div>
+								</div>
+			
+								<!-- Fund Wallet and Buy Tokens -->
+								<form>
+									<div class="form-group mb-3">
+										<label for="fundWallet" class="form-label" style="font-weight: 600; color: #333;">Fund Wallet</label>
+										<input type="number" id="fundWallet" class="form-control rounded-lg" placeholder="Enter amount to fund" style="padding: 0.75rem; border: 1px solid #dcdcdc;">
+									</div>
+									<button type="button" class="btn w-100 rounded-lg mb-4" style="padding: 0.75rem; background-color: #4a90e2; color: #ffffff; font-weight: 600; border: none; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+										Fund Wallet
+									</button>
+			
+									<div class="form-group mb-3">
+										<label for="buyTokens" class="form-label" style="font-weight: 600; color: #333;">Buy Tokens</label>
+										<input type="number" id="buyTokens" class="form-control rounded-lg" placeholder="Enter tokens to buy" style="padding: 0.75rem; border: 1px solid #dcdcdc;">
+									</div>
+									<button type="button" class="btn w-100 rounded-lg mb-4" style="padding: 0.75rem; background-color: #4a90e2; color: #ffffff; font-weight: 600; border: none; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+										Buy Tokens
+									</button>
+								</form>
+			
+								<!-- Transaction History -->
+								<h5 class="mb-3" style="color: #4a90e2;">Transaction History</h5>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead class="table-light">
+											<tr>
+												<th>#</th>
+												<th>Date</th>
+												<th>Description</th>
+												<th>Amount</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>2024-11-10</td>
+												<td>Fund Wallet</td>
+												<td>$50</td>
+												<td>Completed</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>2024-11-09</td>
+												<td>Buy Tokens</td>
+												<td>5 Tokens</td>
+												<td>Completed</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
             
 			
 			
