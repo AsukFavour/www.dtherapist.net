@@ -130,6 +130,27 @@ Border colors for elements in color section: rgba(255, 255, 255, 0.3)
 */
 /* General Styling */
 
+.appointment-details {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.appointment-details h4 {
+    color: #4a90e2;
+}
+.card {
+    margin-top: 10px;
+   
+}
+.card-title {
+    color: #4a90e2;
+    font-weight: bold;
+}
+
+
+
 .dashboard-card {
 	border-radius: 8px;
 	color: white;

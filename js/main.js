@@ -5,6 +5,24 @@
 var $body = jQuery('body');
 var $window = jQuery(window);
 
+
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Optional: Logic to calculate the deduction amount
+    const deductionAmount = '$50.00'; // Replace with dynamic logic if needed
+
+    // Save any required data in localStorage/sessionStorage (if needed for the new page)
+    localStorage.setItem('deductionAmount', deductionAmount);
+
+    // Redirect to the processing page
+    window.location.href = 'appointment_processing.html';
+});
+
+
+
+
+
 //hidding menu elements that do not fit in menu width
 //processing center logo
 function menuHideExtraElements() {

@@ -483,6 +483,13 @@
 			</section>
 
 		<section class="ls section_padding_top_50 section_padding_bottom_50 columns_padding_10">
+			<div class="appointment-details mt-4">
+				<h4>Your Upcoming Appointment</h4>
+				<div id="appointmentDetails">
+					<!-- Appointment details will be dynamically displayed here -->
+				</div>
+			</div>
+
 			<div class="container-fluid mt-5">
 				<div class="row justify-content-center">
 					<div class="col-md-10 col-lg-8">
@@ -573,7 +580,43 @@
 
 
 	
-
+	<script>
+		// Simulated appointment data (replace with dynamic data from the backend)
+		const appointment = {
+			booked: true, // Set to false if no appointment is booked
+			details: {
+				date: '2024-11-30',
+				time: '2:00 PM',
+				therapist: 'Dr. Jane Doe',
+				meetingLink: 'https://meet.example.com/appointment123', // Replace with actual link
+			},
+		};
+	
+		const appointmentContainer = document.getElementById('appointmentDetails');
+	
+		if (!appointment.booked) {
+			appointmentContainer.innerHTML = `
+				<div class="alert alert-warning" role="alert">
+					No upcoming appointments.
+				</div>
+			`;
+		} else {
+			appointmentContainer.innerHTML = `
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Confirmed Appointment</h5>
+						<p class="card-text">
+							<strong>Date:</strong> ${appointment.details.date}<br>
+							<strong>Time:</strong> ${appointment.details.time}<br>
+							<strong>Therapist:</strong> ${appointment.details.therapist}<br>
+							<strong>Meeting Link:</strong> <a href="${appointment.details.meetingLink}" target="_blank">${appointment.details.meetingLink}</a>
+						</p>
+					</div>
+				</div>
+			`;
+		}
+	</script>
+	
 
 	
 

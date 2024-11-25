@@ -381,24 +381,111 @@
                 </div>
             
                 <!-- Appointments Section -->
-                <div class="card-appointments mt-5">
-                    <h4>Appointments</h4>
-                    <ul class="nav nav-tabs mt-3" id="appointmentTabs" role="tablist">
-                        <li class="nav-item" role="presentation">
+				<div class="container-fluid my-5">
+                    <!-- Appointments Section -->
+                    <div class="card-appointments mt-5">
+                        <h4>Appointments</h4>
+                        <ul class="nav nav-tabs mt-3" id="appointmentTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#pending" role="tab" data-toggle="tab" class="nav-link active">Pending</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#scheduled" role="tab" data-toggle="tab" class="nav-link">Scheduled</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="appointmentTabsContent">
+                            <!-- Pending Appointments Table -->
+                            <div class="tab-pane fade in active" id="pending" role="tabpanel">
+                                <table class="table table-striped table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Appointment Date</th>
+                                            <th>Client Name</th>
+                                            <th>Type</th>
+											<th>Duration</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-11-15</td>
+                                            <td>John Doe</td>
+                                            <td>Therapy Session</td>
+											<td>1 Hour</td>
+                                            <td>Pending</td>
+                                            <td>
+                                                <button class="btn btn-success btn-sm">Accept</button>
+                                                <button class="btn btn-danger btn-sm">Decline</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-11-18</td>
+                                            <td>Jane Smith</td>
+                                            <td>Counseling Session</td>
+											<td>1 Hour</td>
+                                            <td>Pending</td>
+                                            <td>
+                                                <button class="btn btn-success btn-sm">Accept</button>
+                                                <button class="btn btn-danger btn-sm">Decline</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-11-20</td>
+                                            <td>Michael Brown</td>
+                                            <td>Consultation</td>
+											<td>1 Hour</td>
+                                            <td>Pending</td>
+                                            <td>
+                                                <button class="btn btn-success btn-sm">Accept</button>
+                                                <button class="btn btn-danger btn-sm">Decline</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             
-                            <a href="#pending" role="tab" data-toggle="tab" class="nav-link active">Pending</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            
-                            <a href="#scheduled" role="tab" data-toggle="tab" class="nav-link ">Scheduled</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content mt-3" id="appointmentTabsContent">
-                        <div class="tab-pane fade show active" id="pending" role="tabpanel">
-                            <p>You do not have any pending consultations.</p>
-                        </div>
-                        <div class="tab-pane fade" id="scheduled" role="tabpanel">
-                            <p>No scheduled appointments available.</p>
+                            <!-- Scheduled Appointments Table with Meeting Links -->
+                            <div class="tab-pane fade" id="scheduled" role="tabpanel">
+                                <table class="table table-striped table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Appointment Date</th>
+                                            <th>Client Name</th>
+                                            <th>Type</th>
+											<th>Duration</th>
+                                            <th>Status</th>
+                                            <th>Meeting Link</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-11-12</td>
+                                            <td>Sarah Lee</td>
+                                            <td>Therapy Session</td>
+											<td>1 Hour</td>
+                                            <td>Scheduled</td>
+                                            <td><a href="https://example.com/meeting1" target="_blank" class="btn btn-primary btn-sm">Join Meeting</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-11-14</td>
+                                            <td>David Kim</td>
+                                            <td>Group Counseling</td>
+											<td>1 Hour</td>
+                                            <td>Scheduled</td>
+                                            <td><a href="https://example.com/meeting2" target="_blank" class="btn btn-primary btn-sm">Join Meeting</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-11-16</td>
+                                            <td>Linda Green</td>
+                                            <td>Consultation</td>
+											<td>1 Hour</td>
+                                            <td>Scheduled</td>
+                                            <td><a href="https://example.com/meeting3" target="_blank" class="btn btn-primary btn-sm">Join Meeting</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

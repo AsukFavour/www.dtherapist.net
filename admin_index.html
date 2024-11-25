@@ -480,6 +480,13 @@
 						<!-- .col-* -->
 
 						<button type="submit" class="theme_button">Book an Appointment</button>
+
+						<div class="appointment-status mt-4">
+							<h4>Appointment Progress</h4>
+							<div id="appointmentProgress">
+								<!-- Progress will be displayed here -->
+							</div>
+						</div>
 					</div>
 					<!-- .row -->
 				</div>
@@ -702,6 +709,42 @@
 		<i class="fa fa-envelope"></i>
 	</a>
 
+
+	<script>
+		// Simulating an appointment status; replace with dynamic data from your backend.
+		const appointment = {
+			confirmed: true, // Change this to `false` for "no appointment."
+			details: {
+				date: '2024-11-25',
+				time: '10:00 AM',
+				therapist: 'Dr. John Doe',
+			},
+		};
+	
+		const progressContainer = document.getElementById('appointmentProgress');
+	
+		if (!appointment.confirmed) {
+			progressContainer.innerHTML = `
+				<div class="alert alert-warning" role="alert">
+					No appointments scheduled.
+				</div>
+			`;
+		} else {
+			progressContainer.innerHTML = `
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Appointment Confirmed</h5>
+						<p class="card-text">
+							<strong>Date:</strong> ${appointment.details.date}<br>
+							<strong>Time:</strong> ${appointment.details.time}<br>
+							<strong>Therapist:</strong> ${appointment.details.therapist}
+						</p>
+					</div>
+				</div>
+			`;
+		}
+	</script>
+	
 
 	<!-- template init -->
 	<script src="js/compressed.js"></script>
