@@ -3994,14 +3994,16 @@ header [class*="col-"] {
 @media screen and (max-width: 767px) {
 	.table_section .row,
   .table_section [class*="col-"] {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
 	}
 }
 
 @media screen and (max-width: 991px) {
 	.table_section.table_section_md .row,
   .table_section.table_section_md [class*="col-"] {
-		display: block;
+		
 	}
 }
 
@@ -5330,7 +5332,7 @@ body.boxed {
 .small-text {
 	font-weight: 700;
 	font-size: 14px;
-	text-transform: uppercase;
+	
 }
 
 @media (min-width: 768px) {
