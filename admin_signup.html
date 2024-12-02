@@ -54,9 +54,7 @@
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 to_animate">
 					<div class="with_border with_padding">
-						<h4 class="text-center">
-							Sign Up New Account
-						</h4>
+						<h4 class="text-center">Sign Up New Account</h4>
 						<hr class="bottommargin_30">
 						<div class="wrap-forms">
 							<form id="signup-form">
@@ -65,7 +63,7 @@
 									<div class="col-sm-12">
 										<div class="form-group has-placeholder">
 											<label for="account-type">Sign Up As</label>
-											<select class="form-control" id="account-type" required onchange="toggleProviderFields()">
+											<select class="form-control" id="account-type" required onchange="toggleProviderFields(); toggleClientFields();">
 												<option value="" disabled selected>Select Account Type</option>
 												<option value="client">Client</option>
 												<option value="provider">Provider</option>
@@ -75,7 +73,68 @@
 									</div>
 								</div>
 	
-								<!-- Provider Additional Fields (Hidden by Default) -->
+								<!-- Client Additional Fields (Hidden by Default) -->
+								<div id="client-fields" style="display: none;">
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group has-placeholder">
+												<label for="client-tied">Are you tied to a Company or HMO?</label>
+												<select class="form-control" id="client-tied" onchange="toggleCompanyHmoFields()">
+													<option value="" disabled selected>Select Option</option>
+													<option value="company">Company</option>
+													<option value="hmo">HMO</option>
+													<option value="none">None</option>
+												</select>
+											</div>
+										</div>
+									</div>
+	
+									<!-- Company Details (Hidden by Default) -->
+									<div id="company-fields" style="display: none;">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group has-placeholder">
+													<label for="company-name">Company Name</label>
+													<i class="grey fa fa-building"></i>
+													<input type="text" class="form-control" id="company-name" placeholder="Enter your company name">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group has-placeholder">
+													<label for="company-id">Company ID</label>
+													<i class="grey fa fa-id-card"></i>
+													<input type="text" class="form-control" id="company-id" placeholder="Enter your company ID">
+												</div>
+											</div>
+										</div>
+									</div>
+	
+									<!-- HMO Details (Hidden by Default) -->
+									<div id="hmo-fields" style="display: none;">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group has-placeholder">
+													<label for="hmo-name">HMO Name</label>
+													<i class="grey fa fa-briefcase"></i>
+													<input type="text" class="form-control" id="hmo-name" placeholder="Enter your HMO name">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="form-group has-placeholder">
+													<label for="hmo-id">HMO ID</label>
+													<i class="grey fa fa-id-badge"></i>
+													<input type="text" class="form-control" id="hmo-id" placeholder="Enter your HMO ID">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
+								<!-- Provider Additional Fields -->
 								<div id="provider-fields" style="display: none;">
 									<div class="row">
 										<div class="col-sm-12">
@@ -87,31 +146,11 @@
 													<option value="therapist">Therapist</option>
 													<option value="counselor">Counselor</option>
 													<option value="psychiatrist">Psychiatrist</option>
-													<!-- Add more professions as needed -->
 												</select>
 											</div>
 										</div>
 									</div>
-	
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group has-placeholder">
-												<label for="license-number">License Number</label>
-												<i class="grey fa fa-id-card"></i>
-												<input type="text" class="form-control" id="license-number" placeholder="Enter your license number" required>
-											</div>
-										</div>
-									</div>
-	
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group has-placeholder">
-												<label for="years-of-experience">Years of Experience</label>
-												<i class="grey fa fa-calendar"></i>
-												<input type="number" class="form-control" id="years-of-experience" placeholder="Enter years of experience" required>
-											</div>
-										</div>
-									</div>
+									<!-- Additional provider fields go here -->
 								</div>
 	
 								<!-- Common Fields -->
@@ -124,7 +163,6 @@
 										</div>
 									</div>
 								</div>
-	
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group has-placeholder">
@@ -134,7 +172,7 @@
 										</div>
 									</div>
 								</div>
-	
+								<!-- Password Fields -->
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group has-placeholder">
@@ -144,7 +182,6 @@
 										</div>
 									</div>
 								</div>
-	
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="form-group has-placeholder">
@@ -155,28 +192,20 @@
 									</div>
 								</div>
 	
-								<div class="row">
-									<div class="col-sm-12">
-										<div class="checkbox">
-											<input type="checkbox" id="remember_me_checkbox">
-											<label for="remember_me_checkbox">Remember Me</label>
-										</div>
-									</div>
-								</div>
-								
 								<button type="submit" class="theme_button block_button color1">Create an account</button>
 							</form>
 						</div>
 					</div>
 	
 					<p class="divider_20 text-center">
-						Already registered?
-						<a href="admin_signin.html">Log In</a>.
+						Already registered? <a href="admin_signin.html">Log In</a>.
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
+	
+	
 	
 	<!-- eof #canvas -->
 
@@ -260,15 +289,39 @@
 
 	<script>
 		function toggleProviderFields() {
-			const accountType = document.getElementById("account-type").value;
-			const providerFields = document.getElementById("provider-fields");
-			
-			if (accountType === "provider") {
-				providerFields.style.display = "block";
-			} else {
-				providerFields.style.display = "none";
-			}
-		}
+    const accountType = document.getElementById('account-type').value;
+    const providerFields = document.getElementById('provider-fields');
+    const clientFields = document.getElementById('client-fields');
+
+    if (accountType === 'provider') {
+        providerFields.style.display = 'block';
+        clientFields.style.display = 'none';
+    } else if (accountType === 'client') {
+        providerFields.style.display = 'none';
+        clientFields.style.display = 'block';
+    } else {
+        providerFields.style.display = 'none';
+        clientFields.style.display = 'none';
+    }
+}
+
+function toggleCompanyHmoFields() {
+    const clientTied = document.getElementById('client-tied').value;
+    const companyFields = document.getElementById('company-fields');
+    const hmoFields = document.getElementById('hmo-fields');
+
+    if (clientTied === 'company') {
+        companyFields.style.display = 'block';
+        hmoFields.style.display = 'none';
+    } else if (clientTied === 'hmo') {
+        companyFields.style.display = 'none';
+        hmoFields.style.display = 'block';
+    } else {
+        companyFields.style.display = 'none';
+        hmoFields.style.display = 'none';
+    }
+}
+
 	</script>
 
 	<!-- template init -->
