@@ -341,7 +341,7 @@
                         <!-- Breadcrumb -->
                         <div class="col-md-6">
                             <ol class="breadcrumb darklinks">
-                                <li class="active">Create Space</li>
+                                <li class="active">Contributors Space</li>
                             </ol>
                         </div>
                         <!-- Date Range -->
@@ -356,43 +356,54 @@
                 </div>
             </section>
             
-             <!-- Main Section -->
-             <section class="ls section_padding_top_50 section_padding_bottom_50 columns_padding_10">
+            <section class="ls section_padding_top_50 section_padding_bottom_50 columns_padding_10">
                 <div class="container-fluid mt-3">
-                    <div class="row">
-                        <main class="col-md-9">
-                            <!-- Chat Space Creation -->
-                            <div class="create-space-form">
-                                <h4>Create Anonymous Chat Space</h4>
-                                <form id="create-space-form">
-                                    <div class="form-group">
-                                        <label for="space-name">Space Name</label>
-                                        <input type="text" class="form-control" id="space-name" placeholder="Enter space name" required>
+                    
+                        
+                        
+            
+                        <!-- Main Content Area -->
+                        <div class="col-md-9">
+                            <div class="tab-content">
+                                <!-- View Shared Experiences -->
+                                <div class="tab-pane fade show active" id="view-experiences" role="tabpanel">
+                                    <h4>Shared Experiences</h4>
+                                    <div class="chat-area">
+                                        <!-- Display shared experiences -->
+                                        <div class="chat-message">
+                                            <strong>Client123:</strong>
+                                            <p>I’ve been struggling with anxiety lately. Any advice?</p>
+                                            <textarea class="form-control mt-2" placeholder="Write your contribution here..."></textarea>
+                                            <button class="btn btn-primary mt-2">Contribute</button>
+                                        </div>
+                                        <div class="chat-message">
+                                            <strong>Client456:</strong>
+                                            <p>Loss of a loved one has been so difficult for me. How do I cope?</p>
+                                            <textarea class="form-control mt-2" placeholder="Write your contribution here..."></textarea>
+                                            <button class="btn btn-primary mt-2">Contribute</button>
+                                        </div>
+                                        <!-- More shared experiences -->
                                     </div>
-                                    <div class="form-group">
-                                        <label for="space-description">Description</label>
-                                        <textarea class="form-control" id="space-description" rows="3" placeholder="Enter a brief description of the space" required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-success">Create Space</button>
-                                </form>
-                            </div>
-
-                            <!-- Chat Area -->
-                            <div class="chat-area mt-5">
-                                <h4>Current Chat Spaces</h4>
-                                <div class="chat-message">
-                                    <strong>Anonymous Space 1:</strong>
-                                    <p>This is a safe space to share experiences and receive advice anonymously.</p>
-                                    <button class="btn btn-primary">Join Chat</button>
                                 </div>
-                                <div class="chat-message">
-                                    <strong>Anonymous Space 2:</strong>
-                                    <p>Discuss strategies for overcoming challenges in a supportive environment.</p>
-                                    <button class="btn btn-primary">Join Chat</button>
+            
+                                <!-- Create DAnonymous Space -->
+                                <div class="tab-pane fade" id="create-space" role="tabpanel">
+                                    <h4>Create DAnonymous Space</h4>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="space-name" class="form-label">Space Name</label>
+                                            <input type="text" class="form-control" id="space-name" placeholder="Enter space name">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="space-description" class="form-label">Description</label>
+                                            <textarea class="form-control" id="space-description" rows="3" placeholder="Enter a brief description"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-success">Create Space</button>
+                                    </form>
                                 </div>
-                                <!-- Add more chat spaces dynamically -->
                             </div>
-                        </main>
+                        </div>
+                    
                 </div>
             </section>
             
@@ -414,29 +425,6 @@
 	<!-- template init -->
 	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
-    <script>
-        // Handle Create Space Form Submission
-        document.getElementById('create-space-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const spaceName = document.getElementById('space-name').value;
-            const spaceDescription = document.getElementById('space-description').value;
-            
-            // Add new space dynamically to the chat area
-            const chatArea = document.querySelector('.chat-area');
-            const newSpace = document.createElement('div');
-            newSpace.classList.add('chat-message');
-            newSpace.innerHTML = `
-                <strong>${spaceName}:</strong>
-                <p>${spaceDescription}</p>
-                <button class="btn btn-primary">Join Chat</button>
-            `;
-            chatArea.appendChild(newSpace);
-
-            // Clear the form
-            document.getElementById('space-name').value = '';
-            document.getElementById('space-description').value = '';
-        });
-    </script>
 
 	<!-- dashboard libs -->
 
